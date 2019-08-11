@@ -162,14 +162,14 @@ class Wandoos:
 		start_el = self.el
 		if run_energy:
 			print("Running energy...")
-			self.el += self.energy_per_second() * seconds
+			self.el += math.floor(self.energy_per_second() * seconds)
 		print("\tGot", self.el - start_el, "energy levels")
 		print()
 
 		start_ml = self.ml
 		if run_magic:
 			print("Running magic...")
-			self.ml += self.magic_per_second() * seconds
+			self.ml += math.floor(self.magic_per_second() * seconds)
 		print("\tGot", self.ml - start_ml, "magic levels")
 		print()
 
